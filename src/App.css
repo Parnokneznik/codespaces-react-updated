@@ -1,31 +1,172 @@
-.App {
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-form {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-form input,
+.task-form select {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.task-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-form select {
+  width: 100%;
+  padding: 8px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.task.completed {
+  background-color: #e0f7fa;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.task button:hover {
+  background-color: #c82333;
+}
+
+.task-details {
   display: flex;
   flex-direction: column;
+}
+
+.task-details span {
+  margin-bottom: 5px;
+}
+
+.task-details .category {
+  color: #888;
+  font-size: 14px;
+}
+/* ... (předešlý kód) */
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  min-height: 200px;
+}
+
+.task {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.task:hover {
+  background-color: #f9f9f9;
 }
 
-.heart {
-  color: #ff0000;
+.task.completed {
+  background-color: #e0f7fa;
 }
 
-.small {
-  font-size: 0.75rem;
+.task.dragging {
+  opacity: 0.7;
 }
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-details span {
+  margin-bottom: 5px;
+}
+
+.task-details .category {
+  color: #888;
+  font-size: 14px;
+}
+
+.task-details .due-date {
+  color: #ff5722;
+  font-size: 14px;
+}
+
+.near-due-date {
+  color: #ff9800;
+}
+
+.task-actions button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.task-actions button:hover {
+  background-color: #c82333;
+}
+
+/* ... (další styly podle potřeby) */
+
